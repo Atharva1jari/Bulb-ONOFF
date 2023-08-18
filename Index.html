@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bulb Toggler</title>
+</head>
+<style>
+    .App-Title
+    {
+        text-align: center;
+    }
+    .bulb-img1
+    {
+        height: 200px;
+        justify-content: space-around;
+        margin-bottom: 300px;
+    }
+    .bulb-img2
+    {
+        height: 200px;
+        justify-content: space-around;
+        margin-bottom: 300px;
+    }
+    .bed
+    {
+        justify-content: space-around;
+    }
+    .btn
+    {
+       margin: auto; 
+       padding: 5px;
+       width: 50px;
+       border-radius: 10px;   
+    }
+   .button-container
+   {
+    display: flex;
+    justify-content: space-around;
+   }
+    .adjust
+    {
+        display: flexbox;
+        padding: 90px;
+    }
+    .bedroom
+    {
+        background-color: rgb(183, 220, 208);
+    }
+</style>
+<body>
+  <div class="bedroom">
+    <img src="./images/table-lamp-OFF.png" class="bulb-img1 adjust" id="bulb-img"/>
+    <img src="./images/bed.png" class="bed adjust"/>
+    <img src="./images/table-lamp-OFF.png" class="bulb-img2 adjust" id="bulb-img"/>
+
+    <div class="button-container">
+        
+        <button type="button" class="btn" onclick="bulbon()">ON</button>
+        <button type="button" class="btn" onclick="bulboff()">OFF</button>
+
+    </div>
+  </div>
+
+    <script>
+        function bulbon()
+        {
+          const bulbimg = document.getElementById ("bulb-img");
+          bulbimg.src = "./images/table-lamp-ON.png";
+        }
+        function bulboff()
+        {
+          const bulbimg = document.getElementById ("bulb-img");
+          bulbimg.src = "./images/table-lamp-OFF.png";
+        }
+    </script>
+    
+</body>
+</html>
