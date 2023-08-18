@@ -45,21 +45,25 @@
         display: flexbox;
         padding: 90px;
     }
-    .bedroom
+    .body-light
     {
-        background-color: rgb(183, 220, 208);
+       background-color: rgb(183, 220, 208);
+    }
+    .body-dark
+    {
+      background-color: rgb(62, 58, 58);
     }
 </style>
-<body>
-  <div class="bedroom">
+<body class="body-light">
+  <div>
     <img src="./images/table-lamp-OFF.png" class="bulb-img1 adjust" id="bulb-img-1"/>
     <img src="./images/bed.png" class="bed adjust"/>
     <img src="./images/table-lamp-OFF.png" class="bulb-img2 adjust" id="bulb-img-2"/>
 
     <div class="button-container">
         
-        <button type="button" class="btn" onclick="bulbon(); bulbonOne()">ON</button>
-        <button type="button" class="btn" onclick="bulboff(); bulboffTwo()">OFF</button>
+        <button type="button" class="btn" onclick="bulbon(); bulbonOne(); lighttheme()">ON</button>
+        <button type="button" class="btn" onclick="bulboff(); bulboffTwo(); darktheme()">OFF</button>
 
     </div>
   </div>
@@ -85,6 +89,19 @@
         {
           const bulbimg = document.getElementById ("bulb-img-2");
           bulbimg.src = "./images/table-lamp-OFF.png";
+        }
+
+        function darktheme()
+        {
+           const bodyelement =document.getElementById ('body');
+           bodyelement.classList.remove('lighttheme');
+           bodyelement.classList.add(darktheme);
+        }
+        function lighttheme()
+        {
+           const bodyelement =document.getElementById ('body');
+           bodyelement.classList.remove('darktheme');
+           bodyelement.classList.add(lighttheme);
         }
     </script>
     
