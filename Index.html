@@ -4,6 +4,10 @@
     <title>Bulb Toggler</title>
 </head>
 <style>
+    .body
+    {
+        margin: 0;
+    }
     .App-Title
     {
         text-align: center;
@@ -12,13 +16,13 @@
     {
         height: 200px;
         justify-content: space-around;
-        margin-bottom: 300px;
+        margin-bottom: 320px;
     }
     .bulb-img2
     {
         height: 200px;
         justify-content: space-around;
-        margin-bottom: 300px;
+        margin-bottom: 320px;
     }
     .bed
     {
@@ -48,14 +52,14 @@
 </style>
 <body>
   <div class="bedroom">
-    <img src="./images/table-lamp-OFF.png" class="bulb-img1 adjust" id="bulb-img"/>
+    <img src="./images/table-lamp-OFF.png" class="bulb-img1 adjust" id="bulb-img-1"/>
     <img src="./images/bed.png" class="bed adjust"/>
-    <img src="./images/table-lamp-OFF.png" class="bulb-img2 adjust" id="bulb-img"/>
+    <img src="./images/table-lamp-OFF.png" class="bulb-img2 adjust" id="bulb-img-2"/>
 
     <div class="button-container">
         
-        <button type="button" class="btn" onclick="bulbon()">ON</button>
-        <button type="button" class="btn" onclick="bulboff()">OFF</button>
+        <button type="button" class="btn" onclick="bulbon(); bulbonOne()">ON</button>
+        <button type="button" class="btn" onclick="bulboff(); bulboffTwo()">OFF</button>
 
     </div>
   </div>
@@ -63,12 +67,23 @@
     <script>
         function bulbon()
         {
-          const bulbimg = document.getElementById ("bulb-img");
+          const bulbimg = document.getElementById ("bulb-img-1");
           bulbimg.src = "./images/table-lamp-ON.png";
         }
         function bulboff()
         {
-          const bulbimg = document.getElementById ("bulb-img");
+          const bulbimg = document.getElementById ("bulb-img-1");
+          bulbimg.src = "./images/table-lamp-OFF.png";
+        }
+
+        function bulbonOne()
+        {
+          const bulbimg = document.getElementById("bulb-img-2");
+          bulbimg.src = "./images/table-lamp-ON.png";
+        }
+        function bulboffTwo()
+        {
+          const bulbimg = document.getElementById ("bulb-img-2");
           bulbimg.src = "./images/table-lamp-OFF.png";
         }
     </script>
