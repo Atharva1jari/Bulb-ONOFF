@@ -1,0 +1,41 @@
+.body
+    {
+        margin: 0;
+    }
+    .App-Title
+    {
+        text-align: center;
+    }
+    .bulb-img1
+    {
+        height: 200px;
+        justify-content: space-around;
+        margin-bottom: 320px;
+    }
+    .bulb-img2
+    {
+        height: 200px;
+        justify-content: space-around;
+        margin-bottom: 320px;
+    }
+    .bed
+    {
+        justify-content: space-around;
+    }
+    .btn
+    {
+       margin: auto; 
+       padding: 5px;
+       width: 50px;
+       border-radius: 10px;   
+    }
+   .button-container
+   {
+    display: flex;
+    justify-content: space-around;
+   }
+    .adjust
+    {
+        display: flexbox;
+        padding: 90px;
+    }
